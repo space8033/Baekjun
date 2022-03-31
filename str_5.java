@@ -11,7 +11,7 @@ public class str_5 {
 
 		sc.close();
 		
-		for(int i = 0; i <= s.length(); i++) {
+		for(int i = 0; i < s.length(); i++) {
 			if ('A' <= s.charAt(i) && 'Z' >= s.charAt(i)) {
 				abc[s.charAt(i) - 'A']+= 1;
 			} else {
@@ -21,12 +21,14 @@ public class str_5 {
 		
 		int max = -1;
 		char ch = '?';
-		for(int j = 0; j < 26; j++) {
-			if (abc[j] > max) {
-				max = abc[j];
-				ch = (char)(j+65);
-			}else if (abc[j] == max) {
+		for(int i = 0; i < 26; i++) {
+			if (abc[i] > max) {
+				max = abc[i];
+				ch = (char)(i+65);
+
+			}else if (abc[i] == max) {
 				ch = '?';
+			
 			}
 		}
 		System.out.print(ch);
